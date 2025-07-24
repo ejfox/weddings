@@ -15,8 +15,12 @@ export default defineNuxtConfig({
       ]
     }
   },
-  ssr: false, // for netlify deploy
+
+  // for netlify deploy
+  ssr: false,
+
   devtools: { enabled: true },
+
   modules: [
     // '@nuxtjs/supabase',
     '@vueuse/nuxt',
@@ -34,6 +38,7 @@ export default defineNuxtConfig({
       }
     ]
   ],
+
   runtimeConfig: {
     public: {
       OPENROUTER_API_KEY: process.env.OPENROUTER_API_KEY,
@@ -41,11 +46,15 @@ export default defineNuxtConfig({
       PRODUCTION: process.env.PRODUCTION
     }
   },
+
   css: ['~/assets/css/main.css'],
+
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {}
     }
-  }
+  },
+
+  compatibilityDate: '2025-06-13'
 })
