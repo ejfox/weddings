@@ -41,8 +41,6 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      OPENROUTER_API_KEY: process.env.OPENROUTER_API_KEY,
-      OPENAI_API_KEY: process.env.OPENAI_API_KEY,
       PRODUCTION: process.env.PRODUCTION
     }
   },
